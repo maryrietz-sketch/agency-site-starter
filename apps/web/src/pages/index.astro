@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
+import OrganizationSchema from '../components/OrganizationSchema.astro';
+import OrderPlaceholder from '../components/OrderPlaceholder.astro';
+import BookingPlaceholder from '../components/BookingPlaceholder.astro';
+import ChurchGivingPlaceholder from '../components/ChurchGivingPlaceholder.astro';
+import ChurchLivestreamPlaceholder from '../components/ChurchLivestreamPlaceholder.astro';
+---
+<BaseLayout title="Reusable Website Agency Starter" description="Astro, Sanity, Cloudflare Pages, SEO, schema, CMS, integrations, and documentation starter for Mary’s client website workflow.">
+  <section class="hero section">
+    <p class="small">Hermes + GitHub + HERMES.md + Cloudflare + Sanity</p>
+    <h1>Reusable starter for fast, SEO-focused, client-editable websites.</h1>
+    <p>This is starter content only. Replace with approved client facts, assets, links, and CMS data before any production launch.</p>
+    <a class="button" href="/starter-checklist/">View starter checklist</a>
+  </section>
+  <section class="section grid" aria-label="Starter capabilities">
+    <article class="card"><h2>SEO from the start</h2><p>Page structure, metadata, schema, sitemap, robots, redirects, Search Console planning, and local SEO documentation.</p></article>
+    <article class="card"><h2>Safe CMS editing</h2><p>Sanity schemas provide structured fields for common updates while preserving design and integration quality.</p></article>
+    <article class="card"><h2>Preserve platforms</h2><p>Ordering, booking, giving, livestream, apps, events, sermons, and payments stay in approved third-party systems.</p></article>
+  </section>
+  <section class="section grid" aria-label="Integration placeholders">
+    <OrderPlaceholder />
+    <BookingPlaceholder />
+    <ChurchGivingPlaceholder />
+    <ChurchLivestreamPlaceholder />
+  </section>
+  <LocalBusinessSchema />
+  <OrganizationSchema />
+</BaseLayout>

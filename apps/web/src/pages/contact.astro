@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactFormPlaceholder from '../components/ContactFormPlaceholder.astro';
+import BreadcrumbListSchema from '../components/BreadcrumbListSchema.astro';
+---
+<BaseLayout title="Contact" description="Starter contact page with safe placeholder form and approved contact information pattern.">
+  <section class="hero section"><h1>Contact page starter</h1><p>Replace placeholders with approved phone, email, location, map link, hours, and form provider before launch.</p></section>
+  <section class="section"><ContactFormPlaceholder /></section>
+  <BreadcrumbListSchema data={{ itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: '/' }, { '@type': 'ListItem', position: 2, name: 'Contact', item: '/contact/' }] }} />
+</BaseLayout>

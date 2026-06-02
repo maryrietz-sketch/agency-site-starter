@@ -1,0 +1,17 @@
+---
+import JsonLd from './JsonLd.astro';
+import { site } from '../lib/site';
+
+interface Props {
+  data?: Record<string, unknown>;
+}
+
+const { data = {} } = Astro.props;
+const base = {
+  '@context': 'https://schema.org',
+  '@type': 'Church',
+  name: site.name,
+  url: site.url,
+};
+---
+<JsonLd data={{ ...base, ...data }} />

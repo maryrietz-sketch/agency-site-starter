@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ChurchAppPlaceholder from '../components/ChurchAppPlaceholder.astro';
+import ChurchEventsPlaceholder from '../components/ChurchEventsPlaceholder.astro';
+import SermonsPlaceholder from '../components/SermonsPlaceholder.astro';
+import EventSchema from '../components/EventSchema.astro';
+import FAQPageSchema from '../components/FAQPageSchema.astro';
+import VideoObjectSchema from '../components/VideoObjectSchema.astro';
+---
+<BaseLayout title="Starter Checklist" description="Checklist page proving required starter components, schemas, and integration placeholders are present.">
+  <section class="hero section"><h1>Starter checklist</h1><p>Use this page to verify the reusable starter includes core pages, SEO patterns, CMS models, and integration placeholders.</p></section>
+  <section class="section grid"><ChurchAppPlaceholder /><ChurchEventsPlaceholder /><SermonsPlaceholder /></section>
+  <EventSchema data={{ name: 'Approved event placeholder', startDate: '2030-01-01', eventStatus: 'https://schema.org/EventScheduled' }} />
+  <FAQPageSchema data={{ mainEntity: [{ '@type': 'Question', name: 'Can clients edit this site?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, through approved Sanity fields after setup.' } }] }} />
+  <VideoObjectSchema data={{ name: 'Approved video placeholder', description: 'Connect a real approved video host before production.', uploadDate: '2030-01-01' }} />
+</BaseLayout>

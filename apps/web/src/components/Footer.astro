@@ -1,0 +1,15 @@
+---
+import { navigation, site } from '../lib/site';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div>
+    <strong>{site.name}</strong>
+    <p>{site.description}</p>
+  </div>
+  <nav aria-label="Footer navigation">
+    {navigation.map((item) => <a href={item.href}>{item.label}</a>)}
+    <a href="/privacy/">Privacy</a>
+  </nav>
+  <p class="small">© {year} {site.name}. Starter content only; replace with approved client content before launch.</p>
+</footer>

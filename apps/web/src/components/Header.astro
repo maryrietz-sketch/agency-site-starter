@@ -1,0 +1,25 @@
+---
+import { navigation, site } from '../lib/site';
+---
+<header class="site-header">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="nav" aria-label="Primary navigation">
+    <a class="brand" href="/" aria-label={`${site.name} home`}>{site.name}</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" data-menu-toggle>
+      <span class="sr-only">Toggle navigation</span>
+      ☰
+    </button>
+    <ul id="primary-menu" class="nav-links" data-menu>
+      {navigation.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+    </ul>
+  </nav>
+</header>
+<script>
+  const toggle = document.querySelector('[data-menu-toggle]');
+  const menu = document.querySelector('[data-menu]');
+  toggle?.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    menu?.classList.toggle('is-open', !expanded);
+  });
+</script>

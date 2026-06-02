@@ -1,0 +1,29 @@
+{
+  "name": "agency-site-starter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reusable Astro + Sanity + Cloudflare Pages starter for local business, church, nonprofit, restaurant, and service-business websites.",
+  "workspaces": [
+    "apps/web",
+    "apps/studio"
+  ],
+  "scripts": {
+    "dev": "npm run dev:web",
+    "build": "npm run build:web && npm run build --workspace=@agency/studio",
+    "preview": "npm run preview --workspace=@agency/web",
+    "build:web": "npm run build --workspace=@agency/web",
+    "dev:web": "npm run dev --workspace=@agency/web",
+    "dev:studio": "npm run dev --workspace=@agency/studio",
+    "check": "npm run check --workspaces --if-present",
+    "lint": "npm run check",
+    "typecheck": "npm run check",
+    "format": "prettier --check .",
+    "format:write": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.8.3"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

@@ -1,0 +1,13 @@
+---
+interface Props {
+  label?: string;
+  url?: string;
+  notes?: string;
+}
+const { label = 'Third-party platform placeholder', url = '#', notes = 'Document provider, owner, approved embed/link method, data source of truth, and launch approval status before going live.' } = Astro.props;
+---
+<section class="integration-card" aria-label={label}>
+  <h2>{label}</h2>
+  <p>{notes}</p>
+  <a class="button" href={url} aria-disabled={url === '#'}>Add approved integration link</a>
+</section>
